@@ -1,12 +1,11 @@
 /* eslint-disable @typescript-eslint/strict-boolean-expressions */
 import { Tabs } from 'expo-router'
-import { Button, HStack, Text, theme, useTheme } from 'native-base'
+import { Button, HStack, Text, theme } from 'native-base'
 import { useCallback } from 'react'
 import { Platform } from 'react-native'
 import { Home, Plus, User } from 'react-native-feather'
 
 const TabBarIcon = ({ name, focused }: { name: string; focused: boolean }) => {
-  const theme = useTheme()
   const color = focused ? theme.colors.white : theme.colors.indigo[400]
   return (
     <HStack alignItems="center" justifyContent="center" space={2}>
@@ -56,14 +55,22 @@ const MainLayout = () => {
     []
   )
 
+  const headerRight = useCallback(() => <Plus color={theme.colors.dark[50]} />, [])
+
   return (
     <Tabs
       screenOptions={{
-        headerTransparent: true,
-        headerRight: () => <Plus color={theme.colors.dark[50]} style={{ marginHorizontal: 10 }} />,
+        headerRight: () => headerRight(),
+        headerShadowVisible: false,
+        headerStyle: {
+          backgroundColor: theme.colors.blueGray[100]
+        },
         title: '',
         tabBarLabelPosition: 'beside-icon',
+        tabBarHideOnKeyboard: true,
         tabBarStyle: {
+          borderColor: 'transparent',
+          borderTopWidth: 0,
           height: 70,
           paddingBottom: 0,
           paddingHorizontal: 10,

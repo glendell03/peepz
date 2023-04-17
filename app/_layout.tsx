@@ -1,9 +1,9 @@
-import { NativeBaseProvider } from 'native-base'
+import { type INativebaseConfig, NativeBaseProvider } from 'native-base'
 import { Stack } from 'expo-router'
 import { StatusBar } from 'expo-status-bar'
 import { LinearGradient } from 'expo-linear-gradient'
 
-const config = {
+const config: INativebaseConfig = {
   dependencies: {
     'linear-gradient': LinearGradient
   }
