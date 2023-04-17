@@ -1,9 +1,9 @@
 /* eslint-disable @typescript-eslint/strict-boolean-expressions */
 import { Tabs } from 'expo-router'
-import { Button, HStack, Text, useTheme } from 'native-base'
+import { Button, HStack, Text, theme, useTheme } from 'native-base'
 import { useCallback } from 'react'
 import { Platform } from 'react-native'
-import { Home, User } from 'react-native-feather'
+import { Home, Plus, User } from 'react-native-feather'
 
 const TabBarIcon = ({ name, focused }: { name: string; focused: boolean }) => {
   const theme = useTheme()
@@ -60,6 +60,7 @@ const MainLayout = () => {
     <Tabs
       screenOptions={{
         headerTransparent: true,
+        headerRight: () => <Plus color={theme.colors.dark[50]} style={{ marginHorizontal: 10 }} />,
         title: '',
         tabBarLabelPosition: 'beside-icon',
         tabBarStyle: {
@@ -68,8 +69,8 @@ const MainLayout = () => {
           paddingHorizontal: 10,
           position: 'absolute',
           bottom: Platform.OS === 'ios' ? 20 : 10,
-          right: 110,
-          left: 110,
+          right: 100,
+          left: 100,
           borderRadius: 40
         }
       }}
