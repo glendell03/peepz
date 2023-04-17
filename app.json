@@ -20,11 +20,18 @@
       "adaptiveIcon": {
         "foregroundImage": "./assets/adaptive-icon.png",
         "backgroundColor": "#ffffff"
-      }
+      },
+      "package": "com.glendell03.peepz"
     },
     "web": {
       "favicon": "./assets/favicon.png",
       "bundler": "metro"
-    }
+    },
+    "extra": {
+      "eas": {
+        "projectId": "b44584e6-0e95-415c-aba9-6d7b2aa8ced6"
+      }
+    },
+    "owner": "glendell03"
   }
 }
