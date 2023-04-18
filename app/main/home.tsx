@@ -1,6 +1,9 @@
-import { Avatar, Box, HStack, Text, View, VStack } from 'native-base'
+import useWeb3Auth from '@/hooks/useWeb3Auth'
+import { Avatar, Button, Center, HStack, Text, VStack } from 'native-base'
 
-const Home: React.FC = () => {
+const Home = () => {
+  const { logout } = useWeb3Auth()
+
   return (
     // <HStack safeArea flex={1} bg="blueGray.100" alignItems="center" justifyContent="center">
     //   <VStack>
