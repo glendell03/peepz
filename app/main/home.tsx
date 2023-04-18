@@ -1,5 +1,6 @@
 import useWeb3Auth from '@/hooks/useWeb3Auth'
-import { Avatar, Button, Center, HStack, Text, VStack } from 'native-base'
+import { Avatar, Box, Button, HStack, Text, VStack } from 'native-base'
+import { View } from 'react-native'
 
 const Home = () => {
   const { logout } = useWeb3Auth()
@@ -53,6 +54,14 @@ const Home = () => {
           $14,268.00
         </Box>
       </HStack>
+      <Button
+        // eslint-disable-next-line @typescript-eslint/no-misused-promises
+        onPress={async () => {
+          await logout()
+        }}
+      >
+        Logout
+      </Button>
     </VStack>
   )
 }
