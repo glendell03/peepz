@@ -17,6 +17,7 @@
     "expo-linking": "~4.0.1",
     "expo-router": "^1.5.3",
     "expo-status-bar": "~1.4.4",
+    "expo-updates": "~0.16.4",
     "native-base": "^3.4.28",
     "react": "18.2.0",
     "react-dom": "18.2.0",

@@ -32,6 +32,12 @@
         "projectId": "b44584e6-0e95-415c-aba9-6d7b2aa8ced6"
       }
     },
-    "owner": "glendell03"
+    "owner": "glendell03",
+    "runtimeVersion": {
+      "policy": "sdkVersion"
+    },
+    "updates": {
+      "url": "https://u.expo.dev/b44584e6-0e95-415c-aba9-6d7b2aa8ced6"
+    }
   }
 }
