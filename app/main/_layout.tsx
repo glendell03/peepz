@@ -6,7 +6,7 @@ import { Platform } from 'react-native'
 import { Home, Plus, User } from 'react-native-feather'
 
 const TabBarIcon = ({ name, focused }: { name: string; focused: boolean }) => {
-  const color = focused ? theme.colors.white : theme.colors.indigo[400]
+  const color = theme.colors.dark['50']
   return (
     <HStack alignItems="center" justifyContent="center" space={2}>
       {name === 'Home' && <Home color={color} fontSize={24} />}
@@ -38,7 +38,7 @@ const TabBarButton = ({ name, ...props }: { name: string }) => {
     <Button
       variant="subtle"
       onPress={onPress}
-      bg={focused ? 'indigo.400' : 'transparent'}
+      bg={focused ? (name === 'Home' ? 'indigo.100' : 'orange.100') : 'transparent'}
       _pressed={{ backgroundColor: '' }}
       flexGrow={1}
       my={2}
@@ -61,6 +61,7 @@ const MainLayout = () => {
     <Tabs
       screenOptions={{
         headerRight: () => headerRight(),
+        headerShown: false,
         headerShadowVisible: false,
         headerStyle: {
           backgroundColor: theme.colors.blueGray[100]

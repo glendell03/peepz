@@ -37,7 +37,7 @@ const RenderContacts = ({ item }: { item: IData }) => (
 
 const Contacts = () => {
   return (
-    <VStack bg="blueGray.100" flex={1} space={3}>
+    <VStack safeArea bg="orange.50" flex={1} space={3}>
       <Input
         InputLeftElement={
           <Box ml={4}>
@@ -51,7 +51,6 @@ const Contacts = () => {
         borderRadius={10}
       />
       <FlatList
-        bg="blueGray.50"
         mx="4"
         p="4"
         borderRadius={16}
