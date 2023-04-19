@@ -1,6 +1,10 @@
-import { Avatar, Box, HStack, Text, View, VStack } from 'native-base'
+import useWeb3Auth from '@/hooks/useWeb3Auth'
+import { Avatar, Box, Button, HStack, Text, VStack } from 'native-base'
+import { View } from 'react-native'
 
-const Home: React.FC = () => {
+const Home = () => {
+  const { logout } = useWeb3Auth()
+
   return (
     // <HStack safeArea flex={1} bg="blueGray.100" alignItems="center" justifyContent="center">
     //   <VStack>
@@ -50,6 +54,14 @@ const Home: React.FC = () => {
           $14,268.00
         </Box>
       </HStack>
+      <Button
+        // eslint-disable-next-line @typescript-eslint/no-misused-promises
+        onPress={async () => {
+          await logout()
+        }}
+      >
+        Logout
+      </Button>
     </VStack>
   )
 }
