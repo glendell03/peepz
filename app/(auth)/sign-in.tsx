@@ -15,7 +15,7 @@ const Auth: React.FC = () => {
 
   return (
     <Box flex={1} safeArea alignItems="center" justifyContent="center">
-      <Text>AUTH PAGE</Text>
+      <Text fontFamily="body">AUTH PAGE</Text>
       {/* <Button> */}
       {/*   <Link href="/main/home">Login</Link> */}
       {/* </Button> */}

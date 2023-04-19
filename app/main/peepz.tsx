@@ -20,7 +20,7 @@ const RenderPeepz = ({ item }: { item: IData }) => (
     <TouchableOpacity>
       <HStack space={3} alignItems="center">
         <Avatar bg="indigo.400" />
-        <Text bold fontSize="md" flex={1}>
+        <Text fontWeight="semibold" fontSize="md" flex={1}>
           {item.handle}
         </Text>
         <ChevronRight color={theme.colors.dark[50]} fontSize={20} />
