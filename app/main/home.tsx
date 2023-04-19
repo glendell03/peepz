@@ -18,7 +18,7 @@ const Home = () => {
     //     </Center>
     //   </VStack>
     // </HStack>
-    <VStack safeArea flex={1} bg="indigo.50">
+    <VStack safeArea flex={1} bg="indigo.100">
       <HStack alignItems="center" justifyContent="space-between" px="4">
         <View>
           <Text fontSize="lg" bold>

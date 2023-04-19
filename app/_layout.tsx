@@ -14,7 +14,7 @@ const Layout = () => {
   return (
     <NativeBaseProvider config={config}>
       <AuthProvider>
-        <StatusBar translucent animated />
+        <StatusBar translucent animated style="auto" />
         <Stack screenOptions={{ headerShown: false }} />
       </AuthProvider>
     </NativeBaseProvider>
