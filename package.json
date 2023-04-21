@@ -38,8 +38,6 @@
   },
   "devDependencies": {
     "@babel/core": "^7.21.4",
-    "@commitlint/cli": "^17.6.1",
-    "@commitlint/config-conventional": "^17.6.1",
     "@react-native/eslint-config": "^0.73.0",
     "@react-native/eslint-plugin": "^0.73.0",
     "@types/react": "~18.0.35",
@@ -58,7 +56,7 @@
     "husky": "^8.0.3",
     "lint-staged": "^13.2.1",
     "prettier": "^2.8.7",
-    "typescript": "*"
+    "typescript": "^4.9.4"
   },
   "resolutions": {
     "metro": "0.76.0",
